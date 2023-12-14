@@ -32,6 +32,8 @@ public class Main {
         }
         System.out.println(dataShiftResult);
 
+        System.out.println(text);  // kontrole
+
         char[] textArray = text.toCharArray();  // We convert the text into a symbolic array
         System.out.println(Arrays.toString(textArray));
 
@@ -58,35 +60,35 @@ public class Main {
 
                 float[] finalTextCode = new float[(textArray.length + 1)];  // Create Array for storing the final code of the text
                 finalTextCode[textArray.length] = dataShiftResult;  // The last member of the array
-                System.out.print(finalTextCode[textArray.length] + "   ");
+                 System.out.print(finalTextCode[textArray.length] + " ");
 
                 switch (indexFunction) {
                     case 0:
 
                         for (int i = 0; i < textArray.length; i++) {
                             finalTextCode[i] = (float) (textCodesArray[i] + functionsArg[dataShiftResult]);
-                            System.out.printf("%f  ", finalTextCode[i]);
+                            System.out.printf("%f ", finalTextCode[i]);
                         }
 
                         break;
                     case 1:
                         for (int i = 0; i < textArray.length; i++) {
                             finalTextCode[i] = (float) (textCodesArray[i] - functionsArg[dataShiftResult]);
-                            System.out.printf("%f  ", finalTextCode[i]);
+                            System.out.printf("%f ", finalTextCode[i]);
                         }
 
                         break;
                     case 2:
                         for (int i = 0; i < textArray.length; i++) {
                             finalTextCode[i] = (float) (textCodesArray[i] / functionsArg[dataShiftResult]);
-                            System.out.printf("%f  ", finalTextCode[i]);
+                            System.out.printf("%f ", finalTextCode[i]);
                         }
 
                         break;
                     case 3:
                         for (int i = 0; i < textArray.length; i++) {
                             finalTextCode[i] = (float) (textCodesArray[i] * functionsArg[dataShiftResult]);
-                            System.out.printf("%f  ", finalTextCode[i]);
+                            System.out.printf("%f ", finalTextCode[i]);
                         }
 
                         break;
